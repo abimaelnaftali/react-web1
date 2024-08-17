@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#icon-page {
+    border-radius: 30px;
+}
+
+#nav {
+    width: 100%;
+    height: 13vh;
+    border: none;
+    margin-bottom: 0;
+    transition: 0.5s;
+}
+
+#foot {
+    width: 100%;
+    height: 7.85vh;
+    border: none;
+    bottom: 0;
+    left: 0;
+}
+
+.top {
+    display: flex;
+}
+
+#carousel {
+    margin-top: 0;
+    height: 480px;
+}
+
+#carousel img {
+    height: 480px;
+}
+
+#text-context {
+    margin: auto;
+}
+
+#text-context h1 {
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+#text-context p {
+    font-weight: bold;
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+#context img {
+    border-radius: 15px;
+    width: 640px;
+    height: 360px;
+}
+
+#context {
+    margin: auto;
+    margin-right: 55px;
+}
+
+#div-1 {
+    background-color: rgb(255, 240, 255);
+    display: flex;
+    width: 100%;
+    height: 460px;
+
+}
+
+#div-2 {
+    width: 100%;
+    height: 435px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#div-2-1 {
+    width: 50%;
+    background-color: rgb(47, 124, 124);
+}
+
+#div-2-2 {
+    display: flex;
+    width: 50%;
+}
+
+#div-2-2 img {
+    display: flex;
+    width: 50%;
+}
+
+#title-1 {
+    font-size: 66px;
+    margin: auto;
+    margin-left: 40px;
+    margin-top: 20px;
+    color: white;
+}
+
+#more {
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(224, 131, 68);
+    ;
+    color: white;
+    margin-left: 50px;
+    margin-top: 40px;
+    padding: 25px;
+}
+
+#more:hover {
+    background-color: rgb(209, 32, 32);
+    transition: 0.5s;
+}
+
+#div-3 {
+    background-color: rgb(226, 225, 225);
+}
+
+.btn {
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#div-3 h1 {
+    font-size: 40px;
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+#div-3 h3 {
+    font-size: 30px;
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+#div-4 {
+    display: none;
+    margin-left: 40px;
+}
+
+#div-4 label {
+    margin-top: 10px;
+}
+
+#div-4 input {
+    border: 2px solid rgb(126, 126, 126);
+    border-radius: 7px;
+    width: 350px;
+    outline: none;
+    font-size: 1.3em;
+    padding: 5px 10px 5px 10px;
+}
+
+#div-5 input {
+    border: 2px solid rgb(126, 126, 126);
+    border-radius: 7px;
+    width: 350px;
+    outline: none;
+    font-size: 1.3em;
+    padding: 5px 10px 5px 10px;
+}
+
+#div-5 {
+    display: none;
+    margin-left: 40px;
+}
+
+#editButton {
+    display: none;
+}
+
+#deleteBottun {
+    display: none;
+}
+
+#editButton {
+    margin-bottom: 0;
+    display: none;
+}
+
+@media(max-width: 700px) {
+    #nav {
+        height: 13vh;
+    }
+
+    #foot {
+        height: 7.85vh;
+    }
+
+    #foot p {
+        font-size: 1px;
+    }
+
+    .top {
+        flex-direction: column;
+    }
+
+
+    #car-text {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #div-1 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #context {
+        margin: auto;
+        padding-bottom: 10px;
+    }
+
+    #context img {
+        display: none;
+    }
+
+    #text-context h1 {
+        margin-top: 20px;
+        margin: auto;
+        text-align: center;
+    }
+
+    #text-context p {
+        margin: 0;
+        text-align: center;
+        margin-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: justify;
+    }
+
+    #text-context p:first-of-type {
+        margin-top: 20px;
+    }
+
+
+    #text-context p:last-of-type {
+        margin-bottom: 20px;
+    }
+
+
+    #div-2 {
+        flex-direction: column;
+    }
+
+    #div-2-2 {
+        display: none;
+        width: 100%;
+    }
+
+    #div-2-1 {
+        width: 100%;
+    }
+
+    #title-1 {
+        font-size: 50px;
+    }
+
+    #more {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 200px;
+    }
+}
