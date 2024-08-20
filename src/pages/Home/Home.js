@@ -1,4 +1,5 @@
 import './Home.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export function Home() {
     return (
@@ -131,4 +132,8 @@ export function Home() {
     </div>
     </>
     )
+}
+
+function CliqueCadastro(){
+    return
 }

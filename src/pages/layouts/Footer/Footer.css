@@ -7,16 +7,16 @@
 
 p {
     color: white;
-    word-break: keep-all;
-    font-size: 18px;
+    padding-top: 18px;
+    font-size: 19px;
 }
 
 footer {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     background-color: rgb(59, 59, 59);
-    height: 100vh;
+    height: 7.85vh;
 }
 
 @media(max-width: 700px) {

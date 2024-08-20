@@ -10,26 +10,23 @@ export function NavBar(){
                     <h1 class="poetsen-one-regular"><a target="_parent" href="../Home/index.html">Essencial</a></h1>
                 </Link>
             </li>
-            <li class="navbar-burger">
-                <button onclick="openMenu()"><img title="Entrar" src="../imgs/menu.png" alt=""/></button>
+            <li class="navbar-links">
+                <Link target="_parent" href="../Home/index.html">INÍCIO</Link>
             </li>
             <li class="navbar-links">
-                <Link target="_parent" href="../Home/index.html">Início</Link>
+                <Link target="_parent" href="../Produtos/produtos.html">PRODUTOS</Link>
             </li>
             <li class="navbar-links">
-                <Link target="_parent" href="../Produtos/produtos.html">Produtos</Link>
+                <Link target="_parent" href="../CadastrarProduto/Index.html">CADASTRAR PRODUTOS</Link>
             </li>
             <li class="navbar-links">
-                <Link target="_parent" href="../CadastrarProduto/Index.html">Cadastrar Produtos</Link>
+                <Link target="_parent" href="../Sobre/sobre.html">SOBRE</Link>
             </li>
             <li class="navbar-links">
-                <Link target="_parent" href="../Sobre/sobre.html">Sobre</Link>
+                <Link target="_parent" href="../Carrinho/index.html">CARRINHO</Link>
             </li>
             <li class="navbar-links">
-                <Link target="_parent" href="../Carrinho/index.html">Carrinho</Link>
-            </li>
-            <li class="navbar-links">
-                <Link target="_parent" href="../Login/login.html">Conta</Link>
+                <Link target="_parent" href="../Login/login.html">CONTA</Link>
             </li>
         </ul>
     </nav>
