@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CryptoJS from 'crypto-js';
 import './Login.css';
@@ -34,7 +34,9 @@ export const Login = () => {
             if (userFound) {
                 setLoginMessage('Login realizado com sucesso!');
                 localStorage.setItem('loggedInUser', JSON.stringify({ email }));
-                navigate('/conta');
+                setTimeout(() => {
+                    navigate('/conta'); // Redireciona para a página de conta
+                }, 1500); // Pequeno atraso para o usuário ver a mensagem de sucesso
             } else {
                 setLoginMessage('Email ou senha incorretos.');
             }
@@ -44,8 +46,19 @@ export const Login = () => {
         }
     };
 
+    useEffect(() => {
+        if (loginMessage) {
+            const timer = setTimeout(() => {
+                setLoginMessage('');
+            }, 3000); // 3 segundos
+
+            return () => clearTimeout(timer);
+        }
+    }, [loginMessage]);
+
     return (
         <div>
+            {loginMessage && <div id="login-message">{loginMessage}</div>}
             <form onSubmit={loginUser}>
                 <div className="divInForm">
                     <div className="formDiv">
@@ -54,16 +67,14 @@ export const Login = () => {
                         <br />
                         <label htmlFor="password">Senha:</label>
                         <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                    </div>
-                    <div className="formButton">
-                        <button type="submit">Login</button>
-                    </div>
-                    <div className="Links">
-                        <a href="/cadastro">Cadastrar-se</a>
-                        <p>Esqueci minha senha</p>
+                        <div className="formButton">
+                            <button type="submit">Login</button>
+                        </div>
+                        <div className="Links">
+                            <a href="/cadastro">Cadastre-se</a>
+                        </div>
                     </div>
                 </div>
-                {loginMessage && <div id="login-message">{loginMessage}</div>}
             </form>
         </div>
     );

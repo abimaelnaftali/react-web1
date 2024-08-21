@@ -30,7 +30,7 @@
 .Links {
     text-align: center;
     display: inline;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 button {
@@ -48,6 +48,13 @@ input {
     margin: 1rem 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+#login-message {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: green;
 }
 
 input:focus {
