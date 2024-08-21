@@ -45,11 +45,12 @@
 #text-context h1 {
     font-size: 33px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-left: 30px;
 }
 
 #text-context p {
+    color: black;
     font-weight: bold;
     text-align: justify;
     font-size: 20px;
@@ -131,8 +132,6 @@
     margin-left: 40px;
     margin-top: 30px;
     margin-bottom: 40px;
-    padding: 20px;
-    border-radius: 20px;
 }
 
 #div-3 h1 {

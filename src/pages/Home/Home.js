@@ -1,7 +1,57 @@
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 export function Home() {
+
+    const ClickCadastro = () => {
+        var newForm = document.getElementById("div-4");
+        newForm.style.display = "block";
+        var button = document.getElementById("newText");
+        var buttonEdit = document.getElementById("editNews");
+        buttonEdit.style.display = "none";
+        button.style.display = "none";
+    }
+
+    const {register, handleSubmit} = useForm();
+    const onSubmit = (e) => {
+        const formNews = document.getElementById('formNews');
+        const formData = new FormData(formNews);
+
+        const newsData = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            tel: formData.get('tel'),
+            wp: formData.get('wp'),
+        };
+
+        addNews(newsData)
+            .then(() => {
+                formNews.reset();
+            })
+            .catch(error => {
+                console.error('Algo deu errado...:', error);
+            });
+    }
+
+    function addNews(newsData) {
+        return fetch('https://projeto-ii-c500a-default-rtdb.firebaseio.com/news.json', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(newsData),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Resposta de rede não foi ok');
+            } else {
+                alert("Tudo certo " + newsData.name + "! Em breve você receberá uma mensagem no endereço de email " + newsData.email + "!");
+            }
+        });
+    }
+
     return (
         <>
         <div style={{display: 'grid'}}>
@@ -83,15 +133,15 @@ export function Home() {
             <a href="../Produtos/produtos.html"><button id="more">Saiba Mais!</button></a>
         </div>
         <div id="div-2-2">
-            <img src="../imgs/colecao1.webp" alt=""/>
-            <img src="../imgs/colecao2.jpg" alt=""/>
+            <img src= "https://t.ctcdn.com.br/pECdk91a25YudQ8xpbj-VVQuIi4=/640x360/smart/i13889.png" alt=""/>
+            <img src="https://welcomecenter.com.br/wp-content/uploads/2018/08/jeans-destroyed-1-1200x480.jpg" alt=""/>
         </div>
     </div>
     <div id="div-3">
         <h1>Quer ficar por dentro de todas as nossas novidades assim que elas chegarem?</h1>
         <h3>Cadastre-se e receba as melhores ofertas.</h3>
             <div id="div-4">
-                <form action="" id="formNews">
+                <form action="" id="formNews" onSubmit={handleSubmit(onSubmit)}>
                     <label for="name">Nome</label><br/>
                     <input type="text" required id="name" name="name"/><br/>
 
@@ -112,7 +162,7 @@ export function Home() {
                 </form>
             </div>
 
-        <button type="button" class="btn btn-primary btn-lg" id="newText">Cadastre-se</button>
+        <button type="button" class="btn btn-primary btn-lg" id="newText" onClick={ClickCadastro}>Cadastre-se</button>
         <a href="../Login/login.html"><button type="button" class="btn btn-primary btn-lg" id="editNews">Já tenho cadastro</button></a>
 
         <div id="div-5">
@@ -132,8 +182,4 @@ export function Home() {
     </div>
     </>
     )
-}
-
-function CliqueCadastro(){
-    return
 }

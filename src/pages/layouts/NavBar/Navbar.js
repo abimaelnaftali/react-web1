@@ -11,24 +11,6 @@ export function NavBar(){
                 </Link>
             </li>
             <li class="navbar-links">
-                <Link target="_parent" href="../Home/index.html">INÍCIO</Link>
-            </li>
-            <li class="navbar-links">
-<<<<<<< HEAD
-                <Link target="_parent" href="../Produtos/produtos.html">PRODUTOS</Link>
-            </li>
-            <li class="navbar-links">
-                <Link target="_parent" href="../CadastrarProduto/Index.html">CADASTRAR PRODUTOS</Link>
-            </li>
-            <li class="navbar-links">
-                <Link target="_parent" href="../Sobre/sobre.html">SOBRE</Link>
-            </li>
-            <li class="navbar-links">
-                <Link target="_parent" href="../Carrinho/index.html">CARRINHO</Link>
-            </li>
-            <li class="navbar-links">
-                <Link target="_parent" href="../Login/login.html">CONTA</Link>
-=======
                 <Link to="/" target="_parent" >Início</Link>
             </li>
             <li class="navbar-links">
@@ -45,7 +27,6 @@ export function NavBar(){
             </li>
             <li class="navbar-links">
                 <Link to="/conta" target="_parent" >Conta</Link>
->>>>>>> bc9b77a1c166d1c5e186377015e85b2950de50b6
             </li>
         </ul>
     </nav>
