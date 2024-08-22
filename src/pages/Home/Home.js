@@ -133,8 +133,8 @@ export function Home() {
                     <Link to="/produtos" target="_parent"><button id="more">Saiba Mais!</button></Link>
                 </div>
                 <div id="div-2-2">
-                    <img src="https://t.ctcdn.com.br/pECdk91a25YudQ8xpbj-VVQuIi4=/640x360/smart/i13889.png" alt="" />
-                    <img src="https://welcomecenter.com.br/wp-content/uploads/2018/08/jeans-destroyed-1-1200x480.jpg" alt="" />
+                    <img src="https://raw.githubusercontent.com/abimaelnaftali/WEBI/main/projeto-1/imgs/colecao2.jpg" alt="" />
+                    <img src="https://raw.githubusercontent.com/abimaelnaftali/WEBI/main/projeto-1/imgs/colecao1.webp" alt="" />
                 </div>
             </div>
             <div id="div-3">
