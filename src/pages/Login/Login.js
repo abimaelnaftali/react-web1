@@ -23,20 +23,18 @@ export const Login = () => {
     const loginUser = async (event) => {
         event.preventDefault();
         const encryptedPassword = encryptPassword(password);
-
+    
         try {
             const response = await fetch('https://projeto-ii-c500a-default-rtdb.firebaseio.com/users.json');
             if (!response.ok) throw new Error('Resposta de rede não foi ok');
-
+    
             const users = await response.json();
-            const userFound = Object.values(users).some(user => user.email === email && user.password === encryptedPassword);
-
+            const userFound = Object.values(users).find(user => user.email === email && user.password === encryptedPassword);
+    
             if (userFound) {
                 setLoginMessage('Login realizado com sucesso!');
-                localStorage.setItem('loggedInUser', JSON.stringify({ email }));
-                setTimeout(() => {
-                    navigate('/conta'); // Redireciona para a página de conta
-                }, 1500); // Pequeno atraso para o usuário ver a mensagem de sucesso
+                localStorage.setItem('loggedInUser', JSON.stringify(userFound));
+                navigate('/conta');
             } else {
                 setLoginMessage('Email ou senha incorretos.');
             }

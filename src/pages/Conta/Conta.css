@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.formButton {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bConta {
+    background-color: #4CAF50;
+    margin-left: 150px;
+    margin-right: 150px;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.conta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.user-details {
+    margin: 0 auto;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+.user-details td {
+    padding: 8px 20px;
+    text-align: left;
+}
+
+.formDiv {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 2rem;
+    flex: 1;
+}
+
+table {
+    justify-content: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    #nav{
+        height: 388px;
+    }
+    #foot{
+        height: 100px;
+    }
+}
