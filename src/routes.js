@@ -4,15 +4,15 @@ import { Home } from "./pages/Home/Home";
 import { Cadastro } from "./pages/Cadastro/Cadastro";
 import { Login } from "./pages/Login/Login";
 import { Conta } from "./pages/Conta/Conta";
-
-const isLoggedIn = () => {
-    return !!localStorage.getItem('loggedInUser');
-};
 import { ListaProdutos } from "./pages/ListaProdutos/ListaProdutos";
 import { CadastroProdutos } from "./pages/CadastroProdutos/CadastroProdutos";
 import { Sobre } from "./pages/Sobre/sobre";
 import { Carrinho } from "./pages/Carrinho/carrinho";
 import { Produto } from "./pages/Produto/produto";
+
+const isLoggedIn = () => {
+    return !!localStorage.getItem('loggedInUser');
+};
 
 export const router = createBrowserRouter([
     {
