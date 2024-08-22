@@ -7,6 +7,7 @@ import { ListaProdutos } from "./pages/ListaProdutos/ListaProdutos";
 import { CadastroProdutos } from "./pages/CadastroProdutos/CadastroProdutos";
 import { Sobre } from "./pages/Sobre/sobre";
 import { Carrinho } from "./pages/Carrinho/carrinho";
+import { Produto } from "./pages/Produto/produto";
 
 export const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
             {
                 path: '/cadastroProdutos',
                 element: <CadastroProdutos />
+            },
+            {
+                path: '/produtos/:id',
+                element: <Produto />
             }
         ]
     }

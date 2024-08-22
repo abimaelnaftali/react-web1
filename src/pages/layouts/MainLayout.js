@@ -5,10 +5,10 @@ import { Footer } from "./Footer/Footer"
 export function MainLayout() {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', justifyContent: 'space-between' }}>
-            <div>
+            <>
                 <NavBar/>
                 <Outlet />
-            </div>
+            </>
             <Footer/>
         </div>
     );
