@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CryptoJS from 'crypto-js';
 import './Login.css';
+import { useCar } from '../../hooks/useCart';
 
 export const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loginMessage, setLoginMessage] = useState('');
     const navigate = useNavigate();
+
+    const { isAdmin } = useCar()
 
     const encryptPassword = (password) => {
         const key = CryptoJS.enc.Utf8.parse('sua-chave-secreta-muito-longa-e-segura');
@@ -32,8 +35,7 @@ export const Login = () => {
             const userFound = Object.values(users).find(user => user.email === email && user.password === encryptedPassword);
     
             if (userFound) {
-                setLoginMessage('Login realizado com sucesso!');
-                localStorage.setItem('loggedInUser', JSON.stringify(userFound));
+                isAdmin(userFound.email);
                 navigate('/');
             } else {
                 setLoginMessage('Email ou senha incorretos.');

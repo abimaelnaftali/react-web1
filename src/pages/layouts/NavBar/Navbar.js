@@ -1,20 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import { useCar } from '../../../hooks/useCart';
 
 export function NavBar() {
-    const [isAdmin, setIsAdmin] = useState(false);
-
-    useEffect(() => {
-        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-        const adminEmail = "user@admin.com";
-
-        if (loggedInUser && loggedInUser.email === adminEmail) {
-            setIsAdmin(true);
-        } else {
-            setIsAdmin(false);
-        }
-    }, []);
+    const { admin } = useCar()
 
     return (
         <nav className="navbar">
@@ -31,7 +21,7 @@ export function NavBar() {
                     <Link to="/produtos">Produtos</Link>
                 </li>
                 {/* O link "Cadastrar Produtos" só aparece se o usuário estiver logado e for o admin */}
-                {isAdmin && (
+                {admin && (
                     <li className="navbar-links">
                         <Link to="/cadastroProdutos">Cadastrar Produtos</Link>
                     </li>
