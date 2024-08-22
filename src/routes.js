@@ -5,6 +5,8 @@ import { Cadastro } from "./pages/Cadastro/Cadastro"
 import { Login } from "./pages/Login/Login";
 import { ListaProdutos } from "./pages/ListaProdutos/ListaProdutos";
 import { CadastroProdutos } from "./pages/CadastroProdutos/CadastroProdutos";
+import { Sobre } from "./pages/Sobre/sobre";
+import { Carrinho } from "./pages/Carrinho/carrinho";
 
 export const router = createBrowserRouter([
     {
@@ -26,6 +28,14 @@ export const router = createBrowserRouter([
             {
                 path: '/produtos',
                 element: <ListaProdutos />,
+            },
+            {
+                path: '/sobre',
+                element: <Sobre />,
+            },
+            {
+                path: '/carrinho',
+                element: <Carrinho />,
             },
             {
                 path: '/cadastroProdutos',
