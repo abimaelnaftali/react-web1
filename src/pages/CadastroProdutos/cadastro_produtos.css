@@ -9,7 +9,7 @@
     padding: 10px;
 }
 
-.my-button {
+.my-btn {
     border: none;
     border-radius: 6px;
     font-size: 0.8rem;
@@ -30,7 +30,7 @@
     }
 }
 
-.my-button-remove {
+.my-btn-remove {
     background-color: #cf3a3a;
     color: #fff;
 
@@ -40,7 +40,7 @@
     }
 }
 
-.my-button-edit {
+.my-btn-edit {
     background-color: #E6E5E5;
     color: #574F4D;
 
