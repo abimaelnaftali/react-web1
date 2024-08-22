@@ -134,6 +134,10 @@
     margin-bottom: 40px;
 }
 
+.btn:last-child{
+    margin-left: 0;
+}
+
 #div-3 h1 {
     font-size: 40px;
     margin-left: 40px;
@@ -271,5 +275,9 @@
         margin-top: 10px;
         margin-bottom: 20px;
         width: 200px;
+    }
+
+    .btn:last-child {
+        margin-left: 40px;
     }
 }
