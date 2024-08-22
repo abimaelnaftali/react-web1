@@ -1,6 +1,5 @@
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export function Home() {
