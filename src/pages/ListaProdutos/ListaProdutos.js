@@ -14,7 +14,7 @@ class Product {
     }
 }
 
-export const Produto = () => {
+export const ListaProdutos = () => {
     const [produtos, setProdutos] = useState([]);
     const [orderField, setOrderField] = useState('menor_preco');
     const [filterField, setFilterField] = useState('todos');

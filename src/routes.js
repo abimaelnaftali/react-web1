@@ -3,7 +3,7 @@ import { MainLayout} from "./pages/layouts/MainLayout"
 import { Home } from "./pages/Home/Home"
 import { Cadastro } from "./pages/Cadastro/Cadastro"
 import { Login } from "./pages/Login/Login";
-import { Produto } from "./pages/ListaProdutos/ListaProdutos";
+import { ListaProdutos } from "./pages/ListaProdutos/ListaProdutos";
 
 export const router = createBrowserRouter([
     {
@@ -23,8 +23,8 @@ export const router = createBrowserRouter([
                 element: <Login />,
             },
             {
-                path: '/produto',
-                element: <Produto />,
+                path: '/produtos',
+                element: <ListaProdutos />,
             }
         ]
     }
