@@ -178,7 +178,7 @@ export const Conta = () => {
                         <input type="password" value={confirmNewPassword} onChange={(e) => setConfirmNewPassword(e.target.value)} />
                         
                         <div className="formButton">
-                            <button onClick={() => setEditing(false)} style={{ backgroundColor: 'red' }}>Cancelar</button>
+                            <button onClick={() => setEditing(false)} style={{ backgroundColor: 'gray' }}>Cancelar</button>
                             <button onClick={handleSaveEdit}>Salvar Alterações</button>
                         </div>
                         <div className="formButton">
@@ -223,8 +223,8 @@ export const Conta = () => {
                             </tbody>
                         </table>
                         <div className="button-group">
-                            <button onClick={handleLogout} style={{ backgroundColor: 'red' }}>Logout</button>
-                            <button onClick={handleEdit}>Editar Perfil</button>
+                            <button className='bConta' onClick={handleLogout} style={{ backgroundColor: 'gray' }}>Logout</button>
+                            <button className='bConta' onClick={handleEdit}>Editar Perfil</button>
                         </div>
                     </div>
                 </div>
