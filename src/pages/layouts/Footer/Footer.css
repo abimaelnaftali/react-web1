@@ -17,6 +17,7 @@ footer {
     align-items: center;
     background-color: rgb(59, 59, 59);
     height: 7.85vh;
+    width: 100%;
 }
 
 @media(max-width: 700px) {

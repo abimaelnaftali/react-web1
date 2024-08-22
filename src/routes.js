@@ -8,6 +8,11 @@ import { Conta } from "./pages/Conta/Conta";
 const isLoggedIn = () => {
     return !!localStorage.getItem('loggedInUser');
 };
+import { ListaProdutos } from "./pages/ListaProdutos/ListaProdutos";
+import { CadastroProdutos } from "./pages/CadastroProdutos/CadastroProdutos";
+import { Sobre } from "./pages/Sobre/sobre";
+import { Carrinho } from "./pages/Carrinho/carrinho";
+import { Produto } from "./pages/Produto/produto";
 
 export const router = createBrowserRouter([
     {
@@ -29,6 +34,26 @@ export const router = createBrowserRouter([
             {
                 path: '/conta',
                 element: isLoggedIn() ? <Conta /> : <Login />,
+            },
+            {
+                path: '/produtos',
+                element: <ListaProdutos />,
+            },
+            {
+                path: '/sobre',
+                element: <Sobre />,
+            },
+            {
+                path: '/carrinho',
+                element: <Carrinho />,
+            },
+            {
+                path: '/cadastroProdutos',
+                element: <CadastroProdutos />
+            },
+            {
+                path: '/produtos/:id',
+                element: <Produto />
             }
         ]
     }
