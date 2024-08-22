@@ -91,7 +91,7 @@ export const Cadastro = () => {
         try {
             const response = await fetch('https://projeto-ii-c500a-default-rtdb.firebaseio.com/users.json', {
                 method: 'POST',
-                headers: { 'Content-type': 'application/json' },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(userData)
             });
 
@@ -110,6 +110,10 @@ export const Cadastro = () => {
                 address: '',
                 addressNumber: ''
             });
+
+            setTimeout(() => {
+                window.location.href = '/conta';
+            }, 3000);
         } catch (error) {
             console.error('Erro ao adicionar usuário:', error);
             setMessage('Erro ao adicionar usuário. Tente novamente mais tarde.');
