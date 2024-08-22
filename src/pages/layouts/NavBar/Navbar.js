@@ -17,7 +17,7 @@ export function NavBar(){
                 <Link to="/produtos" target="_parent" >Produtos</Link>
             </li>
             <li class="navbar-links">
-                <Link to="/cadastrarProduto" target="_parent" >Cadastrar Produtos</Link>
+                <Link to="/cadastroProdutos" target="_parent" >Cadastrar Produtos</Link>
             </li>
             <li class="navbar-links">
                 <Link to="/sobre" target="_parent" >Sobre</Link>

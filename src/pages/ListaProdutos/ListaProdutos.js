@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Product {
     constructor({ id, name, description, quantity, price, photo, parcels, size }) {
