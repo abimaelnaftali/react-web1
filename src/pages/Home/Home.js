@@ -1,5 +1,6 @@
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { useForm } from 'react-hook-form';
 import { Link } from "react-router-dom";
 
@@ -56,44 +57,44 @@ export function Home() {
         <>
             <div style={{ display: 'grid' }}>
 
-                <div id="carousel" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+                <div id="carousel" className="carousel slide">
+                    <div className="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" className="active" aria-current="true"
                             aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
                             <Link to="/produtos" target="_parent">
                                 <img
                                     src="https://www.waverlyclt.com/wp-content/uploads/2022/07/Waverly-94_header-1200x480.jpg"
-                                    class="d-block w-100"
+                                    className="d-block w-100"
                                     alt=''
                                 />
 
                             </Link>
-                            <div class="carousel-caption d-none d-md-block">
+                            <div className="carousel-caption d-none d-md-block">
                                 <h3 style={{ fontWeight: 'bold', }}>Roupas feitas exclusivamente pra você!</h3>
                                 <h5 style={{ fontWeight: 'bold', }}>Trabalhamos com as melhores marcas e materiais, para que você
                                     tenha a certeza de estar vestindo algo que
                                     vai durar.</h5>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             <img src="https://gowhere.com.br/wp-content/uploads/2021/06/Design-sem-nome-15-1200x480.png"
-                                class="d-block w-100" alt="..." />
-                            <div class="carousel-caption d-none d-md-block">
+                                className="d-block w-100" alt="..." />
+                            <div className="carousel-caption d-none d-md-block">
                                 <h3 style={{ fontWeight: 'bold', }}>Roupas feitas exclusivamente pra você!</h3>
                                 <h5 style={{ fontWeight: 'bold', }}>Trabalhamos com as melhores marcas e materiais, para que você
                                     tenha a certeza de estar vestindo algo que
                                     vai durar.</h5>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div className="carousel-item">
                             <img src="https://welcomecenter.com.br/wp-content/uploads/2018/08/jeans-destroyed-1-1200x480.jpg"
-                                class="d-block w-100" alt="..." />
-                            <div class="carousel-caption d-none d-md-block">
+                                className="d-block w-100" alt="..." />
+                            <div className="carousel-caption d-none d-md-block">
                                 <h3 style={{ fontWeight: 'bold', }}>Roupas feitas exclusivamente pra você!</h3>
                                 <h5 style={{ fontWeight: 'bold', }}>Trabalhamos com as melhores marcas e materiais, para que você
                                     tenha a certeza de estar vestindo algo que
@@ -101,13 +102,13 @@ export function Home() {
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Anterior</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Próximo</span>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Próximo</span>
                     </button>
                 </div>
             </div>
@@ -154,19 +155,19 @@ export function Home() {
                         <label for="wp">WhatsApp</label><br />
                         <input type="tel" required id="wp" name="wp" /><br />
 
-                        <button type="submit" class="btn btn-primary btn-lg" style={{ marginLeft: 0 }}
+                        <button type="submit" className="btn btn-primary btn-lg" style={{ marginLeft: 0 }}
                             id="submit">Receber</button>
                         <Link to="/cadastro" target="_parent">
-                            <button type="button" class="btn btn-success btn-lg"
+                            <button type="button" className="btn btn-success btn-lg"
                                 id="createAccount">Criar conta completa</button>
                         </Link>
 
                     </form>
                 </div>
 
-                <button type="button" class="btn btn-primary btn-lg" id="newText" onClick={ClickCadastro}>Cadastre-se</button>
+                <button type="button" className="btn btn-primary btn-lg" id="newText" onClick={ClickCadastro}>Cadastre-se</button>
                 <Link to="/conta" target="_parent">
-                    <button type="button" class="btn btn-primary btn-lg" id="editNews">Já tenho cadastro</button>
+                    <button type="button" className="btn btn-primary btn-lg" id="editNews">Já tenho cadastro</button>
                 </Link>
 
                 <div id="div-5">
@@ -175,11 +176,11 @@ export function Home() {
                         <label for="email-consult">Email</label><br />
                         <input type="email" required id="email-consult" name="email" /><br />
 
-                        <button type="submit" class="btn btn-primary btn-lg" style={{ marginLeft: 0 }}
+                        <button type="submit" className="btn btn-primary btn-lg" style={{ marginLeft: 0 }}
                             id="submit-consult">Consultar</button>
-                        <button type="submit" class="btn btn-warning btn-lg" style={{ marginLeft: 0 }}
+                        <button type="submit" className="btn btn-warning btn-lg" style={{ marginLeft: 0 }}
                             id="editButton">Editar</button>
-                        <button type="submit" class="btn btn-danger btn-lg" style={{ marginLeft: 0 }}
+                        <button type="submit" className="btn btn-danger btn-lg" style={{ marginLeft: 0 }}
                             id="deleteBottun">Deletar</button>
                     </form>
                 </div>
