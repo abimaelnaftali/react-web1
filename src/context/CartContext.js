@@ -4,9 +4,15 @@ import { createContext, useState } from 'react'
 
     export function CartContextProvider( {children} ) {
       const [cart, setCart] = useState([])
+      const [produtos, setProdutos] = useState()
     
       const addProduct = (product) => {
+        console.log(cart)
         setCart([...cart, product])
+      }
+
+      const addProdutos = (produtos) => {
+        setProdutos(produtos)
       }
     
       const removeProduct = (productId) => {
@@ -15,7 +21,7 @@ import { createContext, useState } from 'react'
       }
     
       return (
-        <CarContext.Provider value={{ cart, addProduct, removeProduct }}>
+        <CarContext.Provider value={{ cart, addProduct, removeProduct, produtos, addProdutos }}>
           {children}
         </CarContext.Provider>
       )

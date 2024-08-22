@@ -3,7 +3,7 @@ import './sobre.css';
 export function Sobre() {
     
     return (
-        <div class="Container">
+        <div class="ContainerSobre">
 
         <div class="div1">
             <h2>Sobre a Essencial</h2>

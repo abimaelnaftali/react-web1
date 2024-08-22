@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import { useCar } from '../../hooks/useCart';
 
 class Product {
     constructor({ id, name, description, quantity, price, photo, parcels, size }) {
@@ -21,6 +22,8 @@ export const ListaProdutos = () => {
     const [filterField, setFilterField] = useState('todos');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const { addProdutos } = useCar()
 
     useEffect(() => {
         function fetchProdutos() {
@@ -48,6 +51,7 @@ export const ListaProdutos = () => {
                         productsList.push(product);
                     }
                     setProdutos(productsList);
+                    addProdutos(productsList)
                 })
                 .catch((error) => {
                     //se acontecer algum erro no processamento do fetch
@@ -80,7 +84,7 @@ export const ListaProdutos = () => {
                 {produtos.map((product) => (
                     <div className="col" key={product.id}>
                         <div className="card">
-                            <Link className="card-link" to={`/produtos/${product.id}`} target="_blank" rel="noopener noreferrer">
+                            <Link className="card-link" to={`/produtos/${product.id}`} rel="noopener noreferrer">
                                 <img src={product.photo} className="card-img-top" alt={product.name} />
                             </Link>
                             <div className="card-body">

@@ -20,30 +20,30 @@ export function NavBar() {
         <nav className="navbar">
             <ul>
                 <li className="navbar-logo">
-                    <Link target="_parent" to="/">
+                    <Link to="/">
                         <h1 className="poetsen-one-regular">Essencial</h1>
                     </Link>
                 </li>
                 <li className="navbar-links">
-                    <Link to="/" target="_parent">Início</Link>
+                    <Link to="/">Início</Link>
                 </li>
                 <li className="navbar-links">
-                    <Link to="/produtos" target="_parent">Produtos</Link>
+                    <Link to="/produtos">Produtos</Link>
                 </li>
                 {/* O link "Cadastrar Produtos" só aparece se o usuário estiver logado e for o admin */}
                 {isAdmin && (
                     <li className="navbar-links">
-                        <Link to="/cadastroProdutos" target="_parent">Cadastrar Produtos</Link>
+                        <Link to="/cadastroProdutos">Cadastrar Produtos</Link>
                     </li>
                 )}
                 <li className="navbar-links">
-                    <Link to="/sobre" target="_parent">Sobre</Link>
+                    <Link to="/sobre">Sobre</Link>
                 </li>
                 <li className="navbar-links">
-                    <Link to="/carrinho" target="_parent">Carrinho</Link>
+                    <Link to="/carrinho">Carrinho</Link>
                 </li>
                 <li className="navbar-links">
-                    <Link to="/conta" target="_parent">Conta</Link>
+                    <Link to="/conta">Conta</Link>
                 </li>
             </ul>
         </nav>

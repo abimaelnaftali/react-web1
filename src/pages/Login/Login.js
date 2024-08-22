@@ -34,7 +34,7 @@ export const Login = () => {
             if (userFound) {
                 setLoginMessage('Login realizado com sucesso!');
                 localStorage.setItem('loggedInUser', JSON.stringify(userFound));
-                navigate('/conta');
+                navigate('/');
             } else {
                 setLoginMessage('Email ou senha incorretos.');
             }

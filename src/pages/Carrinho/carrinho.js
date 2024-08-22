@@ -1,8 +1,13 @@
-import './carrinho.css';
+import { useCar } from '../../hooks/useCart';
+import "./carrinho.css"
 
 export function Carrinho() {
+  const { cart } = useCar()
+
+  const cartTotal = cart.reduce((total, produto) => total + parseFloat(produto.price), 0)
+
     return (
-        <div class="Container">
+        <div class="ContainerCarrinho">
         <div >
             <h3 class="SubTitle">Complete seu pedido</h3>
                 <form class="CheckoutForm">
@@ -104,22 +109,26 @@ export function Carrinho() {
                     <h3 class="SubTitle">Roupas selecionadas</h3>
                     <div class="OrderSummary" >
                       <ul class="product-list" >
-                              <li class="SelectedProduct"  >
-                                <img
-                                  alt="product name"
-                                  class="product-image"
-                                />
-                                <div class="product-name-and-controls">
-                                  <p class="product-name">nome do produto</p>
-                                  <div class="controls">
-                                    <button class="RemoveButton" >
-                                      <span class="btn-text">Remover</span>
-                                    </button>
-                                  </div>
-                                </div>
-                                <strong class="price">
-                                </strong>
-                              </li>
+                        {cart.map((product) => (
+                            <li class="SelectedProduct"  >
+                            <img
+                              src={product.photo}
+                              alt="product name"
+                              class="product-image"
+                            />
+                            <div class="product-name-and-controls">
+                              <p class="product-name">{product.name}</p>
+                              <div class="controls">
+                                <button class="RemoveButton" >
+                                  <span class="btn-text">Remover</span>
+                                </button>
+                              </div>
+                            </div>
+                            <strong class="price">
+                              {product.price} R$
+                            </strong>
+                          </li>
+                        ))}    
                       </ul>
                       <div class="BillingSummary" >
                         <ul class="billing">
@@ -128,23 +137,17 @@ export function Carrinho() {
                               Total de itens
                             </p>
                             <span class="billing-items-value billing-value">
-                              R$ 
-                            </span>
-                          </li>
-                          <li>
-                            <p class="billing-delivery-title billing-title">Entrega</p>
-                            <span class="billing-delivery-value billing-value">
-                              R$ 
+                              {cart.length} 
                             </span>
                           </li>
                           <li>
                             <p class="billing-total-title">Total</p>
                             <span class="billing-total-value">
-                              R$ 
+                              R$ {cartTotal} 
                             </span>
                           </li>
                         </ul>
-                          <button class="PlaceOrderButton" >
+                          <button class="PlaceOrderButtonBig" >
                             Confirmar pedido
                           </button>
                     </div>

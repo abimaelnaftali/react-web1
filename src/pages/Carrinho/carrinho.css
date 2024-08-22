@@ -5,17 +5,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#nav {
-    width: 100%;
-    height: 13vh;
-    border: none;
-}
-
-.Container{
+.ContainerCarrinho{
   max-width: 72.5rem;
   padding: 0 20px;
   margin: 2.5rem auto 10rem auto;
   display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center ;
 
   @media (max-width: 480px) {
     flex-direction: column;
@@ -284,6 +281,34 @@
 }
 
 .PlaceOrderButton {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding: 0.9rem 0.9rem;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #DBAC2C;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background-color 0.3s;
+  border: none;
+  max-width: 7rem;
+
+  &:hover {
+    background-color: #C18C1B;
+  }
+
+  &:disabled {
+    background-color: lightgray;
+    cursor: initial;
+    color: gray;
+  }
+}
+
+.PlaceOrderButtonBig{
   display: flex;
   justify-content: center;
   align-content: center;
